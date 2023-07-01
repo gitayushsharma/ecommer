@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'customer/base.html' %}
+{% block dynamic_section %}
+<center>
+<h1 class='display-2'>
+ Updation of School is successful!
+ <hr>
+</h1>
+
+    <a href="{% url 'create-customer' %}" class="btn btn-success">Create Customer</a>
+    <a class="btn btn-success" href="{% url 'cust-list' %}">Customer List</a>
+
+
+
+</center>
+{% endblock %}

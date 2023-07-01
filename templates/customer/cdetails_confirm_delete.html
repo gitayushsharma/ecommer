@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'customer/base.html' %}
+<!-- Dynamic section starts -->
+{% block dynamic_section %}
+ <h2 class="display-2">Delete Confirmation Page</h2>
+ <h4>Are you sure you want to delete the record of Customer - {{cdetails.CName }}?</h4>
+ <form method="post">
+ {% csrf_token %}
+ <button type="submit" class="btn btn-danger btn-lg">Yes</button>
+ <a href="cust-list" class="btn btn-success btn-lg">No</a>
+ </form>
+{% endblock %}

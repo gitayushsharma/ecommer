@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% extends 'Customer/base.html' %}
+
+{% block dynamic_section %}
+<h1 class="display-1">Customer List</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Customer Phone </th>
+        <th scope="col">Customer Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        <a href="{% url 'create-customer' %}" class="btn btn-success">Create Customer</a>
+        <tr>
+            {% for Customer in CustList %}
+          <th scope="row"><a href="{{ Customer.id }}">{{ Customer.CustId }} </a></th>
+          <td><a href="{{ Customer.id }}"> {{ Customer.CName }}</a></td>
+          <td><a href="{{ Customer.id }}">{{Customer.PhoneNum}}</a></td>
+          <td><a href="{{ Customer.id }}">{{Customer.Email}}</a></td>
+        </tr>
+{% endfor %}
+
+{% endblock  %}

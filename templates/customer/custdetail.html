@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+{% extends 'Customer/base.html' %}
+
+{% block dynamic_section %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+</head>
+<body>
+    <h1>Customer Details Are Here : </h1>
+    <div class="table-responsive">
+        <table class="table table-light table-striped">
+            <tr>
+                <th>Customer ID</th>
+                <td>{{Cust_detail.CustId}}</td>
+            </tr>
+            <tr>
+                <th>Customer Name</th>
+                <td>{{Cust_detail.CName}}</td>
+            </tr>
+            <tr>
+                <th>Customer Phone Number :</th>
+                <td>{{Cust_detail.PhoneNum}}</td>
+            </tr>
+            <tr>
+                <th>Customer Email</th>
+                <td>{{Cust_detail.Email}}</td>
+            </tr>
+       
+            <tr>
+                <th>Customer Address :</th>
+                <td>{{Cust_detail.Adrs}}</td>
+            </tr>
+        </table>
+        <a href="delete={{ Cust_detail.id }}" class="btn btn-danger btn-lg">Delete Customer</a>
+        <a href="update={{ Cust_detail.id }}" class="btn btn-success btn-lg">Update Customer</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'cust-list' %}">See Registered Customers</a>
+
+    </div>
+</body>
+{% endblock  %} 
+</html>
