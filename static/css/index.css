@@ -1,0 +1,10 @@
+.display-1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:blue;
+
+}
+
+
+/* background-image:url('{{ STATIC_URL }}images/sample.JPG');
+background-repeat:no-repeat;
+background-size:100%; */

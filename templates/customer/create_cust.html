@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href='{% static "css/index.css" %}'>
+</head>
 
 {% extends 'Customer/base.html' %}
 
+{% load static %}
+
 {% block dynamic_section %}
+
+<body>
+    <img src='{% static "siteimg/backgroundimg.jpg" %}' height='300px'>
 <h1 class="display-1">Create Customer</h1>
 <form method="post">
     {% csrf_token %}
@@ -14,7 +22,7 @@
                 <a class="btn btn-primary" href="{% url 'cust-list' %}"> Show Customer List</a>
             </td>
             <td>
-        <button type="submit" name="btninsert" class="btn btn-success">Add New Customer</button>
+        <butto4n type="submit" name="btninsert" class="btn btn-success">Add New Customer</button>
 
             </td>
         </tr>
@@ -25,4 +33,5 @@
 
 
 </form>
+</body>
 {% endblock  %}
